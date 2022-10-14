@@ -1,0 +1,7 @@
+# misc
+Thumbs.db
+.DS_Store
+# editors
+.idea
+*.sublime*
+.vscode

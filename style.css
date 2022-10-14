@@ -1,0 +1,271 @@
+:root {
+  --basic-grey: #f5f5f5;
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --jungle-green: #29A39D;
+  --seashell: #F2F1F1;
+  --ecru-white: #F7F3EC;
+}
+
+.page {
+  height: 100%;
+}
+
+.body {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--basic-black);
+  box-sizing: border-box;
+  background-color: var(--basic-grey);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.body__wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);
+  background-color: var(--basic-white);
+}
+
+.header {
+  background-color: var(--jungle-green);
+  color: var(--basic-white);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__avatar-wrapper {
+  width: 150px;
+  height: 150px;
+  margin-right: 90px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  border: 7px solid var(--basic-white);
+  border-radius: 50%;
+}
+
+.header__avatar {
+  display: flex;
+  object-fit: contain;
+}
+
+.header__titles-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__name {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+}
+
+.header__job {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: italic;
+  margin: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.main__left-column {
+  width: 40%;
+  background-color: var(--seashell);
+  padding: 40px;
+}
+
+.main__right-column {
+  width: 60%;
+  padding: 40px
+}
+
+.main-title {
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--basic-black);
+  font-weight: 700;
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0 0 40px 0;
+  margin: 0;
+}
+
+.contacts-list__link {
+  display: block;
+  text-decoration: none;
+  color: var(--basic-black);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.contacts-list__link:hover {
+  opacity: 0.5;
+}
+
+.contacts-list__link:active {
+  opacity: 0.3;
+}
+
+.contacts-list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contacts-list__link--phone {
+  padding-left: 40px;
+  background-image: url("assets/mobile-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.contacts-list__link--email {
+  padding-left: 40px;
+  background-image: url("assets/mail-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 6px center;
+}
+
+.contacts-list__link--telegram {
+  padding-left: 40px;
+  background-image: url("assets/telegram-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0 0 40px 10px;
+  margin: 0;
+  font-size: 20px;
+}
+
+.languages-list {
+  list-style: none;
+  padding: 0 0 20px 10px;
+  margin: 0;
+  font-size: 20px;
+}
+
+.objective, .experience {
+  padding-bottom: 40px;
+}
+
+.description {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: block;
+  text-decoration: underline;
+  color: var(--basic-black);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.project-link:hover {
+  opacity: 0.5;
+}
+
+.project-link:active {
+  opacity: 0.3;
+}
+
+.education__place {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.education_dates {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.code-example {
+  padding-top: 40px;
+  background-color: var(--ecru-white);
+}
+
+.code-example .main-title {
+  text-align: center;
+}
+
+.code-example pre {
+  margin: 0;
+}
+
+.code-example__code {
+  font-size: 12px;
+}
+
+.footer {
+  background-color: var(--jungle-green);
+  color: var(--basic-white);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer__github-link {
+  display: block;
+  text-decoration: none;
+  color: var(--basic-white);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  cursor: pointer;
+  padding-left: 40px;
+  background-image: url("assets/github-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.footer__github-link:hover {
+  opacity: 0.5;
+}
+
+.footer__github-link:active {
+  opacity: 0.3;
+}
