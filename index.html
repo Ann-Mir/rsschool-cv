@@ -33,7 +33,7 @@
                             </li>
                             <li class="contacts-list__item">
                                 <span class="visually-hidden">E-mail:</span>
-                                <a class="contacts-list__link contacts-list__link--email" href = "anna.mail787@gmail.com">anna.mail787@gmail.com</a>
+                                <a class="contacts-list__link contacts-list__link--email" href="anna.mail787@gmail.com">anna.mail787@gmail.com</a>
                             </li>
                             <li class="contacts-list__item">
                                 <span class="visually-hidden">Telegram</span>
@@ -101,27 +101,27 @@
                         * @param {number} size - the allowed size of consecutive identical symbols
                         * @returns {string} - the new string without extra symbols according passed size
                         */
-        
+
                         export function trimSymbols(string, size) {
-        
+
                           if (size === 0 ||  string === '') {
                             return '';
                           }
-        
+
                           if (!size) {
                             return string;
                           }
-        
+
                           const arr = [...string];
                           let counter = 0;
                           let match = false;
                           const result = [];
-        
+
                           arr.forEach((letter, index) => {
-                            if (index > 0) {
+                            if (index &gt; 0) {
                               match = letter === arr[index - 1];
                             }
-                            if (match && counter &lt; size) {
+                            if (match &amp;&amp; counter &lt; size) {
                               result.push(letter);
                               counter++;
                             }
@@ -130,7 +130,7 @@
                               counter = 1;
                             }
                           });
-                        
+
                           return result.join('');
                         }
                     </code>
