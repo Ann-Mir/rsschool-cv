@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV: Anna Mironovich</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="body__wrapper">
+        <header class="header">
+            <div class="header__avatar-wrapper">
+                <img class="header__avatar" src="assets/avatar.png" alt="Portrait." width="150" height="150">
+            </div>
+            <div class="header__titles-wrapper">
+                <h1 class="header__name">Anna Mironovich</h1>
+                <h2 class="header__job">Front-End Developer</h2>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__wrapper">
+                <div class="main__left-column">
+                    <section>
+                        <h3 class="main-title">Contacts</h3>
+                        <ul class="contacts-list">
+                            <li class="contacts-list__item">
+                                <span class="visually-hidden">Phone:</span>
+                                <a class="contacts-list__link contacts-list__link--phone" href="tel:+97158273522">+97158273522</a>
+                            </li>
+                            <li class="contacts-list__item">
+                                <span class="visually-hidden">E-mail:</span>
+                                <a class="contacts-list__link contacts-list__link--email" href = "anna.mail787@gmail.com">anna.mail787@gmail.com</a>
+                            </li>
+                            <li class="contacts-list__item">
+                                <span class="visually-hidden">Telegram</span>
+                                <a class="contacts-list__link contacts-list__link--telegram" href="https://telegram.me/an4_m">@an4_m</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3 class="main-title">Skills</h3>
+                        <ul class="skills-list">
+                            <li>HTML</li>
+                            <li>CSS (SASS, SCSS, LESS)</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>React</li>
+                            <li>Redux</li>
+                            <li>Jest</li>
+                            <li>Git</li>
+                        </ul>
+                        <h3 class="main-title">Languages</h3>
+                        <ul class="languages-list">
+                            <li>English - Upper-Intermediate</li>
+                            <li>Russian - Native</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="main__right-column">
+                    <section class="objective">
+                        <h3 class="main-title">Career Objective</h3>
+                        <p class="description">
+                            A Front-End Developer with a desire to grow in a collaborative team environment.
+                            Experience in building web applications from the ground using JavaScript, TypeScript, React, and Redux.
+                        </p>
+                    </section>
+                    <section class="experience">
+                        <h3 class="main-title">Work Experience</h3>
+                        <a class="project-link" href="https://guitar-shop-mu.vercel.app/guitars?_start=0&_limit=9">
+                            Guitar Shop
+                        </a>
+                        <p class="description">
+                            Collaborated with a designer, QA engineers, and a back-end developer.
+                            Set up the client side of the project from scratch.
+                            Implemented the catalogue, navigation, filters, catalogue search, pagination, and cart using React,
+                            Redux, and TypeScript. Covered the app with tests using React Testing Library and Jest.
+                        </p>
+                    </section>
+                    <section class="education">
+                        <h3 class="main-title">Education</h3>
+                        <p class="education__place">HTML Academy - React Developer</p>
+                        <p class="education_dates">September 2020 - December 2021</p>
+                        <p class="description">
+                            A comprehensive front-end development course covering all key aspects of creating accessible and
+                            responsive web applications using CSS, JavaScript, React, Redux, and Testing Libraries.
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <section class="code-example">
+                <h3 class="main-title">Code Example</h3>
+                <pre>
+                    <code class="code-example__code">
+                        /**
+                        * trimSymbols - removes consecutive identical symbols if they quantity bigger that size
+                        * @param {string} string - the initial string
+                        * @param {number} size - the allowed size of consecutive identical symbols
+                        * @returns {string} - the new string without extra symbols according passed size
+                        */
+        
+                        export function trimSymbols(string, size) {
+        
+                          if (size === 0 ||  string === '') {
+                            return '';
+                          }
+        
+                          if (!size) {
+                            return string;
+                          }
+        
+                          const arr = [...string];
+                          let counter = 0;
+                          let match = false;
+                          const result = [];
+        
+                          arr.forEach((letter, index) => {
+                            if (index > 0) {
+                              match = letter === arr[index - 1];
+                            }
+                            if (match && counter &lt; size) {
+                              result.push(letter);
+                              counter++;
+                            }
+                            if (!match) {
+                              result.push(letter);
+                              counter = 1;
+                            }
+                          });
+                        
+                          return result.join('');
+                        }
+                    </code>
+                </pre>
+            </section>
+        </main>
+        <footer class="footer">
+            <a class="footer__github-link" href="https://github.com/Ann-Mir">
+                My GitHub
+            </a>
+            <p class="footer__date">October, 2022</p>
+            <a href="https://rs.school/js/" aria-label="link to RS School JavaScript Course">
+                <img src="assets/rs-scholl.svg" alt="RS School Icon" width="95" height="30">
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
